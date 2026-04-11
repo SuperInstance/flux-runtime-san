@@ -202,8 +202,8 @@ _DHATU_PROPERTIES: dict[str, DhatuProperty] = {
                          SemanticClass.ARITHMETIC, "to rub, polish (=multiply)"),
     "śodh": DhatuProperty("śodh", Transitivity.TRANSITIVE, Valency.VALENCY_2,
                           SemanticClass.ARITHMETIC, "to purify, cleanse (=divide)"),
-    "śoṣ": DhatuProperty("śoṣ", transitivity=Transitivity.TRANSITIVE, valency=Valency.VALENCY_2,
-                          SemanticClass=SemanticClass.DESTRUCTION, meaning_en="to consume, diminish"),
+    "śoṣ": DhatuProperty("śoṣ", Transitivity.TRANSITIVE, Valency.VALENCY_2,
+                          SemanticClass.DESTRUCTION, "to consume, diminish"),
     "virah": DhatuProperty("virah", Transitivity.INTRANSITIVE, Valency.VALENCY_1,
                            SemanticClass.DESTRUCTION, "to be separated, negate"),
 
