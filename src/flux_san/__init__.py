@@ -16,7 +16,7 @@ Architecture:
   - Vocabulary tiling (4 levels) → NL → bytecode mapping
 """
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 __title__ = "FLUX-san"
 __sanskrit_title__ = "प्रवाहिनी"
 
@@ -28,6 +28,9 @@ from flux_san.vm import FluxVMSan, Opcode, ScopedRegister, VibhaktiScopeError
 from flux_san.dhatu import Dhatu, DhatuCompiler, Gana, Pada, Conjugation
 from flux_san.sandhi import SandhiEngine, SandhiRule, SandhiToken, SandhiType
 from flux_san.vocabulary import VocabularyTable, VocabTile, VocabLevel
+from flux_san.scope_manager import VibhaktiScopeManager, ScopeCode as SanScopeCode, ScopeFrame, ScopeTransition
+from flux_san.dhatu_resolver import DhatuOpcodeResolver, DhatuProperty, Transitivity, Valency, SemanticClass, ThiArity
+from flux_san.code_merger import SandhiCodeMerger, MergedCode, MergeType, MergeEffect, ConceptFusion
 
 __all__ = [
     # Core systems
@@ -58,4 +61,20 @@ __all__ = [
     "VocabularyTable",
     "VocabTile",
     "VocabLevel",
+    # R8: Scope Management, Extended Dhātu, Code Merging
+    "VibhaktiScopeManager",
+    "SanScopeCode",
+    "ScopeFrame",
+    "ScopeTransition",
+    "DhatuOpcodeResolver",
+    "DhatuProperty",
+    "Transitivity",
+    "Valency",
+    "SemanticClass",
+    "ThiArity",
+    "SandhiCodeMerger",
+    "MergedCode",
+    "MergeType",
+    "MergeEffect",
+    "ConceptFusion",
 ]
