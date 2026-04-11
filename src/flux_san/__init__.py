@@ -12,9 +12,11 @@ Architecture:
   - Tri-vacana (3 numbers)      → arity types (1, 2, N)
   - Tri-liṅga (3 genders)      → 3 type families
   - Sandhi resolution           → token fusion / splitting
+  - Dhātu (verbal roots)        → opcode generation
+  - Vocabulary tiling (4 levels) → NL → bytecode mapping
 """
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 __title__ = "FLUX-san"
 __sanskrit_title__ = "प्रवाहिनी"
 
@@ -22,8 +24,13 @@ from flux_san.vibhakti import Vibhakti, ScopeLevel
 from flux_san.lakara import Lakara, ExecutionMode
 from flux_san.samasa import SamasaType, SamasaParser
 from flux_san.interpreter import FluxInterpreterSan
+from flux_san.vm import FluxVMSan, Opcode, ScopedRegister, VibhaktiScopeError
+from flux_san.dhatu import Dhatu, DhatuCompiler, Gana, Pada, Conjugation
+from flux_san.sandhi import SandhiEngine, SandhiRule, SandhiToken, SandhiType
+from flux_san.vocabulary import VocabularyTable, VocabTile, VocabLevel
 
 __all__ = [
+    # Core systems
     "Vibhakti",
     "ScopeLevel",
     "Lakara",
@@ -31,4 +38,24 @@ __all__ = [
     "SamasaType",
     "SamasaParser",
     "FluxInterpreterSan",
+    # VM
+    "FluxVMSan",
+    "Opcode",
+    "ScopedRegister",
+    "VibhaktiScopeError",
+    # Dhātu
+    "Dhatu",
+    "DhatuCompiler",
+    "Gana",
+    "Pada",
+    "Conjugation",
+    # Sandhi
+    "SandhiEngine",
+    "SandhiRule",
+    "SandhiToken",
+    "SandhiType",
+    # Vocabulary
+    "VocabularyTable",
+    "VocabTile",
+    "VocabLevel",
 ]
