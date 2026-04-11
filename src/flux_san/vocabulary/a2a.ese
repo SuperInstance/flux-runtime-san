@@ -1,0 +1,74 @@
+# ============================================================
+# a2a.ese — Agent-to-Agent Vocabulary for FLUX-san
+# अजेन्त-तः-अजेन्त शब्दावली — प्रवाहिनी भाषा सार्वभौमिक निष्पादनम्
+# ============================================================
+#
+# Sanskrit A2A terminology mapped to FLUX agent protocol opcodes.
+# Each entry: IAST term | Devanāgarī | FLUX opcode | English
+
+# --- Core A2A Protocol (मूल-अजेन्त-प्रोटोकॉल्) ---
+
+# TELL — One-way message (एकपार्श्व-सन्देशः)
+brūhi       | बृहि        | TELL         | tell / say to
+kathaya     | कथय        | TELL         | narrate / tell
+ārocaya     | आरोचय      | TELL         | inform / notify
+jñāpaya     | ज्ञापय      | TELL         | make known / notify
+prakāśaya   | प्रकाशय    | TELL         | illuminate / reveal
+
+# ASK — Question / Request (प्रश्न / याचना)
+pṛccha     | पृच्छ      | ASK          | ask / question
+praṣṭu     | प्रष्टु    | ASK          | inquire
+yāca        | याच         | ASK          | request / beg
+anuśṛṇu    | अनुशृणु    | ASK          | listen / inquire
+
+# DELEGATE — Transfer task (कार्य-स्थानान्तरम्)
+niyujya     | नियुज्य    | DELEGATE     | assign / depute
+upadeśaya   | उपदेशय    | DELEGATE     | instruct / delegate
+śāsanaṃ kuru | शासनं कुरु | DELEGATE  | command / order
+adhyāpanaṃ kuru | अध्यापनं कुरु | DELEGATE | teach / instruct
+
+# BROADCAST — Announce to all (सर्वेभ्यः प्रकटनम्)
+prakaraṇaṃ kuru | प्रकरणं कुरु | BROADCAST | announce / proclaim
+sarveṣāṃ kathaya | सर्वेषां कथय | BROADCAST | tell everyone
+viśravaṇaṃ kuru | विश्रवणं कुरु | BROADCAST | make heard publicly
+
+# --- Trust & Security (विश्वासः / सुरक्षा) ---
+
+# TRUST_CHECK — Verify trust (विश्वास-परीक्षा)
+viśvāsaṃ pṛccha | विश्वासं पृच्छ | TRUST_CHECK | check trust
+śraddhām parīkṣa | श्रद्धां परीक्ष | TRUST_CHECK | verify faith/trust
+niścayaṃ kuru  | निश्चयं कुरु  | TRUST_CHECK | ascertain / confirm
+
+# CAPABILITY_REQ — Request permission (अधिकार-याचना)
+adhikāraṃ yāca  | अधिकारं याच  | CAPABILITY_REQ | request authority
+anumatiṃ yāca   | अनुमतिं याच  | CAPABILITY_REQ | request permission
+śaktiṃ prārthaya | शक्तिं प्रार्थय | CAPABILITY_REQ | request power/capability
+
+# --- Agent Roles (अजेन्त-भूमिकाः) ---
+
+# Using vibhakti system:
+#   सम्बोधन (vocative, case 8) → invocation scope → A2A call
+
+kāryakartā   | कार्यकर्ता  | AGENT_ROLE | task-doer
+sahāyakaḥ    | सहायकः    | AGENT_ROLE | helper / assistant
+pradhānaḥ    | प्रधानः    | AGENT_ROLE | chief / primary
+anuyāyī      | अनुयायी   | AGENT_ROLE | follower
+netā         | नेता       | AGENT_ROLE | leader / guide
+prakāśakaḥ   | प्रकाशकः  | AGENT_ROLE | illuminator / explainer
+parīkṣakaḥ   | परीक्षकः  | AGENT_ROLE | examiner / tester
+
+# --- Agent Lifecycle (अजेन्त-जीवनचक्रम्) ---
+
+jātaḥ        | जातः      | SPAWN      | born / created
+niśeṣṭaḥ     | निषेष्टः   | HALT       | concluded / terminated
+punarārambhaḥ | पुनरारम्भः | RESTART    | restarted
+svataḥkṛtaḥ  | स्वतःकृतः  | AUTONOMOUS  | self-acting / autonomous
+
+# --- Coordination Patterns (समन्वय-प्रकाराः) ---
+
+kramaśaḥ    | क्रमशः     | SEQUENTIAL | sequentially
+sahakrameṇa | सहक्रमेण   | PARALLEL   | simultaneously
+kāleṇa     | कालेन      | DEFERRED   | in due time
+tatkāle     | तत्काले    | IMMEDIATE  | immediately
+śarīraṃ kuru | शरीरं कुरु | FORK       | fork body (subprocess)
+miśraṃ kuru  | मिश्रं कुरु | MERGE     | merge / combine

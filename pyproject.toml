@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flux-runtime-san"
+version = "0.1.0"
+description = 'FLUX-san — प्रवाहिनी भाषा सार्वभौमिक निष्पादनम्। Sanskrit-first NL runtime where Pāṇinian vyākaraṇa shapes the architecture: vibhakti → scope control, lakāra → execution mode, samāsa → type composition, dvivacana → pairwise ops.'
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["nlp", "sanskrit", "flux", "runtime", "paninian", "vyakarana", "vibhakti", "lakara", "samasa"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Natural Language :: Sanskrit",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+
+[project.scripts]
+flux-san = "flux_san.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

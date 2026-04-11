@@ -1,0 +1,2 @@
+[console_scripts]
+flux-san = flux_san.cli:main

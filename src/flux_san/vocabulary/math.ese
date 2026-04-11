@@ -1,0 +1,108 @@
+# ============================================================
+# math.ese — Mathematical Vocabulary for FLUX-san
+# गणितशब्दावली — प्रवाहिनी भाषा सार्वभौमिक निष्पादनम्
+# ============================================================
+#
+# Sanskrit mathematical terminology mapped to FLUX operations.
+# Each entry: IAST term | Devanāgarī | FLUX opcode | English
+
+# --- Arithmetic Operations (गणितक्रियाः) ---
+
+# Addition (योगः)
+gaṇaya    | गणय      | IADD     | add / compute sum
+pluta     | प्लुत     | IADD     | plus (with)
+yogaḥ     | योगः     | IADD     | sum / union
+saṃyogaḥ  | संयोगः   | IADD     | conjunction / addition
+rāśiyogaḥ | राशियोगः  | IADD     | sum of quantities
+
+# Subtraction (व्यवकलनम्)
+śoṣa      | शोष      | ISUB     | subtract / diminish
+viśeṣaḥ   | विशेषः   | ISUB     | difference
+apahāraḥ  | अपहारः   | ISUB     | removal / subtraction
+
+# Multiplication (गुणनम्)
+guṇa      | गुण      | IMUL     | multiply
+guṇayogaḥ | गुणयोगः  | IMUL     | product
+ghātaḥ    | घातः     | IMUL     | product (formal)
+sarvasaṅkhyā | सर्वसङ्ख्या | IMUL | total multiplication
+
+# Division (भाजनम्)
+bhāj      | भाज      | IDIV     | divide
+bhāgaḥ    | भागः     | IDIV     | division / share
+bhājanaḥ  | भाजनम्   | IDIV     | act of dividing
+hāraḥ     | हारः     | IDIV     | divisor
+
+# Modulo (शेषः)
+śeṣaḥ     | शेषः     | IMOD     | remainder
+avaśiṣṭaḥ | अवशिष्टः | IMOD     | what remains
+
+# Negation (विपर्ययः)
+viparyayaḥ | विपर्ययः | INEG     | negate
+
+# Increment / Decrement (वृद्धिः / ह्रासः)
+pluta     | प्लुत     | INC      | increment / increase
+hrāsaḥ    | ह्रासः    | DEC      | decrement / decrease
+
+# --- Comparison (तुलना) ---
+
+tulya     | तुल्य     | ICMP     | equal / compare
+alpa      | अल्प      | ILT      | less than
+bahutaraḥ | बहुतरः   | IGT      | greater than
+samānaḥ   | समानः    | IEQ      | equal to
+
+# --- Range / Accumulation ---
+
+paryantayogaḥ | पर्यन्तयोगः | LOOP+IADD | sum from ... to ...
+kramaśaḥ    | क्रमशः     | LOOP     | sequentially / step by step
+
+# --- Power / Root (वर्ग / मूल) ---
+
+vargaḥ     | वर्गः     | IMUL+IMUL | square
+ghanaḥ     | घनः       | POW      | cube
+mūlaḥ      | मूलः      | SQRT     | square root
+gatau      | गतौ       | POW      | raised to
+
+# --- Constants (स्थिराङ्काः) ---
+
+pi         | पि        | CONST    | π (3.14159...)
+e          | ए         | CONST    | Euler's e (2.71828...)
+śūnyaḥ     | शून्यः    | MOVI 0   | zero
+ekam       | एकम्     | MOVI 1   | one
+
+# --- Number Words (सङ्ख्याशब्दाः) ---
+
+śūnya  | शून्य   | 0
+eka    | एक     | 1
+dvi    | द्वि    | 2
+tri    | त्रि    | 3
+catur  | चतुर्  | 4
+pañca  | पञ्च    | 5
+ṣaṭ    | षट्    | 6
+sapta  | सप्त    | 7
+aṣṭa   | अष्ट   | 8
+nava   | नव     | 9
+daśa   | दश     | 10
+viṃśati | विंशति | 20
+śata   | शत     | 100
+sahasra | सहस्र  | 1000
+lakṣa  | लक्ष   | 100000
+koṭi   | कोटि   | 10000000
+
+# --- Stack Operations (स्तरक्रियाः) ---
+
+juṣa     | जुष      | PUSH     | push onto stack
+gṛhṇa   | गृह्ण    | POP      | pop from stack
+
+# --- Registers / Memory (अवस्थायाः) ---
+
+avasthā  | अवस्था   | REGISTERS | register state
+sthāna   | स्थान    | MOVI     | place / location
+sthira   | स्थिर    | STORE    | store (persist)
+
+# --- Flow Control (प्रवाहनियन्त्रणम्) ---
+
+āvṛttaḥ  | आवृत्तः  | JMP      | loop / repeat
+yady      | यदि      | JZ/JE    | if (conditional)
+anyathā   | अन्यथा   | JNE      | else (alternative)
+virāmaḥ   | विरामः   | HALT     | halt / stop
+darśaya   | दर्शय    | PRINT    | display / print
