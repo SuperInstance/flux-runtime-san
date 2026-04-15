@@ -6,6 +6,9 @@
 
 > **पाणिनेः व्याकरणम् एव प्रकारविज्ञानम्** — Pāṇini's grammar IS a type system.
 
+> **This is the Sanskrit (संस्कृतम्) localization of [flux-runtime](https://github.com/SuperInstance/flux-runtime).**
+> FLUX-san is part of the FLUX internationalization fleet — a Sanskrit-first NL runtime for the FLUX universal bytecode VM, mapping Pāṇini's grammatical system onto computational primitives.
+
 ## परिचयः (Introduction)
 
 FLUX-san is a Sanskrit-first natural language runtime for the FLUX universal bytecode VM. Sanskrit's grammar — codified in Pāṇini's Aṣṭādhyāyī with 3,959 rules operating on 1,700 elements through anubandhas (markers) and saṃjñās (technical terms) — is the most rigorously formalized natural language in human history. This makes Sanskrit the most natural language for programming.
@@ -161,6 +164,60 @@ Pāṇini's Aṣṭādhyāyī (c. 4th century BCE) is a **formal generative gram
 
 This makes Sanskrit grammar structurally equivalent to a type system / compiler pipeline — just expressed 2,400 years before computer science.
 
+## निर्माणम् (Build)
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd flux-runtime-san
+
+# Install in editable mode with dev dependencies
+pip install -e ".[dev]"
+
+# Verify installation
+flux-san namaskara
+```
+
+## परीक्षणम् (Test)
+
+```bash
+# Run the full test suite
+pytest tests/ -v
+
+# Run via CLI
+flux-san pariksha
+
+# Run specific test categories
+pytest tests/ -v -k "test_interpreter"
+pytest tests/ -v -k "test_vibhakti"
+pytest tests/ -v -k "test_lakara"
+```
+
+## Project Structure
+
+```
+flux-runtime-san/
+├── src/flux_san/
+│   ├── __init__.py          # Package entry point
+│   ├── cli.py               # Sanskrit CLI (namaskara, calaya, vibhakti, …)
+│   ├── interpreter.py       # Core interpreter (VM + encoder + Sanskrit NL)
+│   └── vocabulary/
+│       ├── math.ese         # Mathematical vocabulary
+│       ├── maritime.ese     # Maritime vocabulary
+│       └── a2a.ese          # Agent-to-agent vocabulary
+├── tests/
+│   └── test_interpreter_san.py
+├── docs/
+│   └── design.md            # Design document
+├── pyproject.toml
+├── CHARTER.md
+└── README.md
+```
+
 ## अनुज्ञापत्रम् (License)
 
 MIT
+
+---
+
+<img src="callsign1.jpg" width="128" alt="callsign">
